@@ -24,7 +24,7 @@ function Addtask({ onClose }) {
 
         console.log("Sending Task Data:", taskData);
 
-        Axios.post('http://localhost:8080/addtask', taskData)
+        Axios.post("https://gorevlerbackend.onrender.com/addtask", taskData)
             .then(() => {
                 console.log("Task added successfully");
                 onClose(); // Close the modal after task is added

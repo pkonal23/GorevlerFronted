@@ -13,7 +13,7 @@ function Taskcontainer({ searchQuery }) {
     const fetchData = async () => {
         try {
             const storedUsername = localStorage.getItem('stored_username');
-            const response = await fetch(`http://localhost:8080/tasks?username=${storedUsername}`);
+            const response = await fetch(`https://gorevlerbackend.onrender.com/tasks?username=${storedUsername}`);
             if (!response.ok) {
                 throw new Error('Failed to fetch tasks');
             }
@@ -42,7 +42,7 @@ function Taskcontainer({ searchQuery }) {
         if (confirmBox) {
             try {
                 console.log("Task ID:", taskId);
-                const response = await Axios.delete(`http://localhost:8080/deltasks/${taskId}`);
+                const response = await Axios.delete(`https://gorevlerbackend.onrender.com/deltasks/${taskId}`);
                 if (response.status === 200) {
                     console.log("✅ Task Deleted!");
                     fetchData();
@@ -57,7 +57,7 @@ function Taskcontainer({ searchQuery }) {
 
     const toggleTaskStatus = async (taskId) => {
         try {
-            await Axios.put(`http://localhost:8080/tasksts/${taskId}`, {});
+            await Axios.put(`https://gorevlerbackend.onrender.com/tasksts/${taskId}`, {});
             console.log('✅ Task status updated!');
             fetchData();
         } catch (error) {

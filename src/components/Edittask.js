@@ -16,7 +16,7 @@ function Edittask({ onClose, taskId, taskName, taskDes, taskPriority }) {
             return;
         }
     
-        Axios.get(`http://localhost:8080/task/${taskId}`)
+        Axios.get(`https://gorevlerbackend.onrender.com/task/${taskId}`)
             .then(res => {
                 if (res.data.length === 0) {
                     console.error("❌ Task not found!");
@@ -38,7 +38,7 @@ function Edittask({ onClose, taskId, taskName, taskDes, taskPriority }) {
             return;
         }
     
-        Axios.put(`http://localhost:8080/edittask/${taskId}`, {
+        Axios.put(`https://gorevlerbackend.onrender.com/edittask/${taskId}`, {
             task_name: taskname,
             task_des: taskdes,
             task_priority: taskpriority,

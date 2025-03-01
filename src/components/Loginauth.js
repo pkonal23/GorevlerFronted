@@ -26,7 +26,7 @@ function Loginauth({ onLoginSuccess }) {
         window.localStorage.setItem("isLoggedIn", true);
         onLoginSuccess();
     
-        axios.post("http://localhost:8080/google_email", {
+        axios.post("https://gorevlerbackend.onrender.com/google_email", {
             name: loggedInName,
             username: loggedInUsername,
             email: loggedInEmail,
@@ -54,7 +54,7 @@ function Loginauth({ onLoginSuccess }) {
 
     const handleLocalSubmit = (e) => {
         e.preventDefault();
-        axios.post("http://localhost:8080/login", loginCredentials)
+        axios.post("https://gorevlerbackend.onrender.com/login", loginCredentials)
             .then(res => {
                 if (res.data && res.data.Status === "Success") {
                     onLoginSuccess();
@@ -90,7 +90,7 @@ function Loginauth({ onLoginSuccess }) {
     })
     const handelSubmit = (e) => {
         e.preventDefault();
-        axios.post("http://localhost:8080/register", credentials)
+        axios.post("https://gorevlerbackend.onrender.com/register", credentials)
             .then(res => {
                 if (res.data && res.data.Status === "Success") {
                     alert('You are signed up! Now login using your credentials');
