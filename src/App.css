@@ -1,38 +1,465 @@
-.App {
-  text-align: center;
+.navitems {
+  margin-top: 2%;
+  display: flex;
+  align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.searchinput {
+  padding: 10px;
+  border-radius: 16px;
+  border: none;
+  background-color: aliceblue;
+  width: 250px;
+  margin-right: 5%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.rightside {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin-right: 2%;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.leftside {
+  margin-left: 2%;
+  color: #000;
+  font-size: 20px;
+  width: 100%;
+  font-family: Inika, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
+}
+
+.leftlogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.sidebarlinks {
+  position: relative;
   display: flex;
   flex-direction: column;
+  margin-left: 10%;
+  margin-top: 40px;
+}
+
+.sidebarlinks a {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  font-size: 20px;
+  margin-top: 10%;
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+  white-space: break-spaces;
+}
+
+
+
+
+
+.angry-grid {
+  display: grid;
+  grid-template: 10% 100% / 20% 80%;
+}
+
+#item-0 {
+  background-color: #ff991a;
+  grid-row: 1 /2;
+  grid-column: 1;
+  height: 100vh;
+  overflow: scroll;
+  position:fixed;
+  width: 20vw;
+}
+
+#item-1 {
+
+  background-color: #ffffff;
+  grid-row: 1/2;
+  grid-column: 2 / 7;
+}
+
+#item-2 {
+
+  background-color: #EFEFEF;
+  grid-row: 2;
+  grid-column: 2;
+  height: 90vh;
+  overflow: scroll;
+}
+
+
+.taskcontainerbg {
+  margin: 2% auto;
+  background-color: white;
+  width: 43rem;
+  padding: 1%;
+  border-radius: 14px;
+}
+
+.taskcontainerinnerbg {
+  display: flex;
+  background-color: #171717;
+  border-radius: 12px;
+  padding: 10px 0px;
+}
+
+.taskpriority {
+  margin: 10px;
+  width: 1.2rem;
+  height: 3.4rem;
+  border-radius: 5px;
+  background-color: #ec5766;
+}
+
+.taskinfo {
+  color: white;
+  width: 80%;
+}
+
+.taskname {
+  font-weight: 700;
+  text-decoration: underline;
+  margin-bottom: 5px;
+}
+
+.taskstatusbtn {
+  text-align: center;
+  padding: 2px 10px;
+  height: 20px;
+  outline: solid 1px #ec5766;
+  border-radius: 8px;
+  background-color: #fff;
+  margin: 0px 10px;
+  font-weight: 900;
+  border: none;
+}
+.taskstatusbtn:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.taskstatusoutter{
+  position: relative;
+  display: flex;
+  align-items: end;
+}
+
+.roundbtn{
+  border-radius: 100px;
+  width: 76px;
+  height: 76px;
+  filter: drop-shadow(0px 4px 4px #00000040) drop-shadow(0px 4px 4px #00000040);
+  border: none;
+  font-size: 60px;
+  overflow:hidden;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin: 20px; 
+}
+
+.roundbtn1{
+  border-radius: 100px;
+  width: 76px;
+  height: 76px;
+  filter: drop-shadow(0px 0px 10px #ffffff) drop-shadow(0px 4px 4px #00000040);
+  border: none;
+  font-size: 60px;
+  overflow:hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto; 
+}
+
+.roundbtn:hover{
+  cursor: pointer;
+}
+
+.funcbtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+
+.outteraddtask{
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color: #424242de;
+}
+
+.inneraddtask{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color: #2e2e2e;
+  /* padding: 20px; */
+  border-radius:10px ;
+  box-shadow: 10px 10px 50px;
+  overflow: scroll;
+}
+
+.formaddtask{
+  font-size: 1.2rem;
+  color: white;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  /* height: 100vh; */
+  /* overflow: scroll; */
+}
+
+.formaddtask input , select{
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  width: 20rem;
+}
+
+.taskdescription{
+  height: 50px;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  width: 20rem;
+}
+.taskdescription1{
+
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  width: 20rem;
+  background-color: #00000000;
+  border: none;
+  color: white;
+  font-weight: 900;
+}
+
+a{
+  cursor: pointer;
+}
+
+.formaddtask font{
+  margin-left: 10px;
+}
+
+.closebtn{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #555;
+    font-weight: 900;
+
+}
+
+.closebtn:hover {
+  color: #d1d1d1;
+}
+
+.addtaskbtn{
+  width: 100%;
+  margin-top: 30px;
+  padding: 20px;
+  border-radius:0px 0px 10px 10px;
+  font-size: 1.3rem;
+  font-weight: 800;
+  background-color: #fea436;
+  border: 0;
+}
+
+.addtaskbtn:hover{
+  cursor: pointer;
+}
+
+.taskcontainerinnerbg:hover{
+  cursor: pointer;
+}
+
+.logout_link{
+  padding: 10px;
+  border-radius: 10px;
+  border: 0;
+  font-size: large;
+  font-weight: 900;
+}
+.logout_link:hover{
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.authdiv{
+  padding: 2vw 1vw;
+}
+
+.authnav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.authlinks button{
+  margin: 0vw 7vw;
+  color: black;
+  border: none;
+  background-color: #fff;
+  font-size: 1.2rem;
+  font-weight: 900;
+}
+#auth_btn {
+  border: 5px solid #EFFE14;
+  box-shadow: 0 0 0 0px #fff, /* Add a white shadow */
+              0 0 0 0.4px #0069ba;
+  width: max-content;
+  padding: 5px;
+  color: #EFFE14;
+  -webkit-text-stroke: 0.4px #0069ba;
+  transform: scale(1);
+  transition: border 0.8s ease, box-shadow 0.8s ease, transform 0.8s ease-in, color 0.8s ease-in, ;
+}
+
+#auth_btn:hover {
+  transform: scale(1.2);
+  color: #0069ba;
+  border: 5px dashed #EFFE14;
+  box-shadow: none;
+  transition: border 0.4s ease-in, box-shadow 0.4s ease-in, transform 0.4s ease-in;
+}
+
+
+button:hover{
+  cursor: pointer;
+}
+
+.authgrid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1000px;
+  margin: 0 auto;
+  gap: 20%;
+}
+
+.authform{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pattern img{
+  height: 75vh;
+}
+
+
+.formelements {
+  margin-top: 5%;
+
+}
+
+#username {
+  border-radius: 50px;
+  height: 40px;
+  width: 330px;
+  padding: 2px;
+  background-color: #23313E;
+  border: 0;
+  padding-left: 10px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#password {
+  margin-top: 10px;
+  border-radius: 50px;
+  height: 40px;
+  width: 330px;
+  padding: 2px;
+  padding-left: 10px;
+  background-color: #23313E;
+  border: 0;
+  color: white;
+}
+#name {
+  margin-top: 10px;
+  border-radius: 50px;
+  height: 40px;
+  width: 330px;
+  padding: 2px;
+  padding-left: 10px;
+  background-color: #23313E;
+  border: 0;
+  color: white;
+}
+#email {
+  margin-top: 10px;
+  border-radius: 50px;
+  height: 40px;
+  width: 330px;
+  padding: 2px;
+  padding-left: 10px;
+  background-color: #23313E;
+  border: 0;
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.pswd {
+  text-decoration: none;
+  color: rgb(143, 143, 143);
+  margin-left: 15%;
+}
+
+.signinedin {
+  color: rgb(143, 143, 143);
+}
+
+.loginbtn {
+  padding:5% 10%;
+  border-radius: 50px;
+  font-weight: 900;
+  color: white;
+  background: linear-gradient(45deg, #8e44ad, #730789, #042c7c);
+  border: 5px solid #730789;
+  border: 0;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.authbtns{
+  display: flex;
+  justify-content: space-between;
+}
+
+.authform form{
+  margin-bottom: 5%;
+}
+
+.authform p{
+  font-weight: 700;
+  color: #4e4e4e;
+}
+
+.tglloginbtn{
+  padding:5% 10%;
+  border-radius: 50px;
+  font-weight: 900;
+  color: black;
+  border: 5px solid #730789;
+  background: white;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.error-message{
+  color: red;
 }
