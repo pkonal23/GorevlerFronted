@@ -1,3 +1,4 @@
+
 .navitems {
   margin-top: 2%;
   display: flex;
@@ -21,6 +22,7 @@
 
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 
@@ -566,12 +568,174 @@ button:hover {
   border-radius: 5px;
 }
 
+
+
+
+
+
+/* Background Styling */
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  background-color: #0a0a0a;
+  color: white;
+  padding: 0vw 5vw;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Left Text Styling */
+.hero-text {
+  max-width: 600px;
+  text-align: left;
+}
+
+.hero-subtitle {
+  font-size: 2rem;
+  color: #c9a36c;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.hero-title {
+  font-size: 5rem;
+  font-weight: bold;
+  font-family: "Playfair Display", serif;
+  line-height: 1.2;
+}
+
+.hero-quote {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  opacity: 0.8;
+}
+
+
+
+
+/* Background Circular Patterns */
+.hero-bg {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 50%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(0,0,0,0) 70%);
+  transform: translateY(-50%);
+}
+
+/* Social Links & GoReveler - Bottom Right */
+.bottom-right-container {
+  position: absolute;
+  right: 5vw;
+  bottom: 5vh;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+/* Social Buttons */
+.social-btn {
+  padding: 10px 20px;
+  border: 2px solid white;
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+  background: white;
+  color: #0a0a0a;
+}
+
+/* GoReveler Button */
+.goreveler-btn {
+  padding: 12px 25px;
+  font-size: 1.2rem;
+  color: white;
+  background: linear-gradient(90deg, #ff8a00, #e52e71);
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 50px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.goreveler-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 10px 30px rgba(255, 138, 0, 0.5);
+}
+
+
+.social-bstns a{
+  margin: 5px;
+}
+
+
 /* Responsive Sidebar */
 @media screen and (max-width: 768px) {
+
+
+
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-subtitle {
+    padding-top: 1000px;
+    font-size: 1.5rem;
+    color: #c9a36c;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .hero-quote {
+    font-size: 1.2rem;
+  }
+
+  .social-links {
+    right: 2vw;
+  }
+
+
+  .bottom-right-container {
+width: 100%;
+    right: 5vw;
+    bottom: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+  }
+
+
+  .social-bstns{
+    padding: 10px;
+  }
+
+  
+
+
+  .hero-text {
+    max-width: 600px;
+    text-align: left;
+    margin-top: 20%;
+  }
+
+
   .sidebar {
     width: 60vw;
     z-index: 99999;
   }
+
 
 
   .angry-grid {
@@ -745,6 +909,40 @@ button:hover {
 
     padding: 1.5%;
     border-radius: 14px;
+  }
+
+  .authlinks button {
+    margin: 0vw 7vw;
+    color: rgb(0, 92, 153);
+    border: none;
+    background-color: #fff;
+    font-size: 1.1rem;
+    font-weight: 900;
+
+  }
+
+
+  #auth_btn {
+    border: 5px solid #EFFE14;
+    box-shadow: 0 0 0 0px #fff,
+      /* Add a white shadow */
+      0 0 0 0.4px #0069ba;
+    width: max-content;
+    padding: 5px;
+    font-size: 15px;
+    color: #EFFE14;
+    -webkit-text-stroke: 0.4px #0069ba;
+    transform: scale(1);
+    transition: border 0.8s ease, box-shadow 0.8s ease, transform 0.8s ease-in, color 0.8s ease-in, ;
+    text-decoration: none;
+  }
+
+  #auth_btn:hover {
+    transform: scale(1.2);
+    color: #0069ba;
+    border: 5px dashed #EFFE14;
+    box-shadow: none;
+    transition: border 0.4s ease-in, box-shadow 0.4s ease-in, transform 0.4s ease-in;
   }
 
 
