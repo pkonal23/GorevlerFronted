@@ -583,7 +583,7 @@ button:hover {
   color: white;
   padding: 0vw 5vw;
   position: relative;
-  overflow: hidden;
+  overflow: scroll;
 }
 
 /* Left Text Styling */
@@ -706,6 +706,8 @@ button:hover {
 
 
   .bottom-right-container {
+    position: relative;
+    margin-top: 25px;
 width: 100%;
     right: 5vw;
     bottom: 5vh;
