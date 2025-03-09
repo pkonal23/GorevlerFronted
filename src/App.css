@@ -21,12 +21,18 @@
 
 }
 
+
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+
 .leftside {
   margin-left: 2%;
   color: #000;
   font-size: 20px;
   width: 100%;
-  font-family: Inika, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 600;
+
 }
 
 .leftlogo {
@@ -55,6 +61,9 @@
   font-weight: 700;
   white-space: break-spaces;
 }
+
+
+
 
 
 
@@ -186,14 +195,17 @@
   right: 20px;
 }
 
-
-.outteraddtask{
+.outteraddtask {
   position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
   top: 0;
-  background-color: #424242de;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999; /* Ensure it's on top */
 }
 
 .inneraddtask{
@@ -201,12 +213,27 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  background-color: #2e2e2e;
+  background-color: #171717;
   /* padding: 20px; */
   border-radius:10px ;
   box-shadow: 10px 10px 50px;
   overflow: scroll;
 }
+
+.inneraddtask {
+  background-color: #171717;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+  overflow: scroll;
+  overflow-y: auto; /* Ensures scrolling inside modal if needed */
+  z-index: 1001;
+}
+body.modal-open {
+  overflow: hidden;
+}
+
+
 
 .formaddtask{
   font-size: 1.2rem;
@@ -276,7 +303,7 @@ a{
   border-radius:0px 0px 10px 10px;
   font-size: 1.3rem;
   font-weight: 800;
-  background-color: #fea436;
+  background-color: #ff991a;
   border: 0;
 }
 
@@ -462,4 +489,179 @@ button:hover{
 
 .error-message{
   color: red;
+}
+
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full screen height */
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #555;
+}
+
+.loading-spinner::after {
+  content: "";
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+  border: 4px solid #3498db;
+  border-top: 4px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+
+
+
+/* Sidebar Styling */
+.sidebar {
+  background-color: #ff991a;
+  height: 100vh;
+  width: 20vw;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  transition: left 0.3s ease-in-out;
+  overflow: scroll;
+  z-index: 1000;
+}
+
+/* Sidebar when Open */
+.sidebar.open {
+  left: 0;
+}
+
+/* Hamburger Icon */
+.hamburger {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  cursor: pointer;
+  z-index: 1100;
+  background: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* Responsive Sidebar */
+@media screen and (max-width: 768px) {
+  .sidebar {
+      width: 60vw;
+      z-index: 99999;
+  }
+
+
+  .angry-grid {
+    display: flex;
+    flex-direction: column;
+    z-index: 99999999;
+  }
+
+  #item-0 {
+    background-color: #ff991a;
+    height: 0vh;
+    overflow: scroll;
+  }
+
+  #item-1 {
+    display: flex;
+    flex-direction: column;
+    margin: 2%;
+  }
+  .navitems {
+    margin-top: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 2%;
+    font-family: "Pixelify Sans", sans-serif;
+  }
+
+
+  
+  .leftside {
+
+      color: #000;
+      font-size: 20px;
+      width: 100%;
+text-align: right;
+font-size: 1.2rem;
+
+    }
+
+    .rightside {
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      margin: 0%;
+      width: 100%;
+  }
+  .rightside svg{
+    display: none;
+  }
+
+  .searchinput {
+    padding: 10px;
+    border-radius: 16px;
+    border: none;
+    background-color: aliceblue;
+    width: 220px;
+    margin-right: 0%;
+}
+
+
+  
+}
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+
+
+
+
+
+@media screen and (max-width: 500px) {
+  .authgrid{
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+
+  }
+
+  .authform{
+    margin-top: 10%;
+  }
+
+  .pattern{
+    margin: 2% auto;
+  }
+
+  .pattern img{
+    height: 45vh;
+  }
+  .taskcontainerbg {
+    margin: 2% auto;
+    background-color: white;
+    width: 95%;
+
+    padding: 1.5%;
+    border-radius: 14px;
+  }
+
+  
 }

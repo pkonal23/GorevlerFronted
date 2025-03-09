@@ -1,7 +1,16 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Axios from 'axios';
 
 function Addtask({ onClose }) {
+
+    useEffect(() => {
+        document.body.classList.add("modal-open");
+        return () => {
+          document.body.classList.remove("modal-open");
+        };
+      }, []);
+
+
     const currentDate = new Date().toLocaleDateString('en-CA');
 
     const [taskname, setTaskname] = useState('');
