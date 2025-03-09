@@ -80,7 +80,7 @@
   grid-column: 1;
   height: 100vh;
   overflow: scroll;
-  position:fixed;
+  position: fixed;
   width: 20vw;
 }
 
@@ -146,46 +146,47 @@
   font-weight: 900;
   border: none;
 }
-.taskstatusbtn:hover{
+
+.taskstatusbtn:hover {
   cursor: pointer;
   transform: scale(1.1);
 }
 
-.taskstatusoutter{
+.taskstatusoutter {
   position: relative;
   display: flex;
   align-items: end;
 }
 
-.roundbtn{
+.roundbtn {
   border-radius: 100px;
   width: 76px;
   height: 76px;
   filter: drop-shadow(0px 4px 4px #00000040) drop-shadow(0px 4px 4px #00000040);
   border: none;
   font-size: 60px;
-  overflow:hidden;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 20px; 
+  margin: 20px;
 }
 
-.roundbtn1{
+.roundbtn1 {
   border-radius: 100px;
   width: 76px;
   height: 76px;
   filter: drop-shadow(0px 0px 10px #ffffff) drop-shadow(0px 4px 4px #00000040);
   border: none;
   font-size: 60px;
-  overflow:hidden;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 20px auto; 
+  margin: 20px auto;
 }
 
-.roundbtn:hover{
+.roundbtn:hover {
   cursor: pointer;
 }
 
@@ -205,17 +206,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 99999; /* Ensure it's on top */
+  z-index: 99999;
+  /* Ensure it's on top */
 }
 
-.inneraddtask{
+.inneraddtask {
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   background-color: #171717;
-  /* padding: 20px; */
-  border-radius:10px ;
+  border-radius: 10px;
   box-shadow: 10px 10px 50px;
   overflow: scroll;
 }
@@ -226,16 +227,18 @@
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
   overflow: scroll;
-  overflow-y: auto; /* Ensures scrolling inside modal if needed */
+  overflow-y: auto;
+  /* Ensures scrolling inside modal if needed */
   z-index: 1001;
 }
+
 body.modal-open {
   overflow: hidden;
 }
 
 
 
-.formaddtask{
+.formaddtask {
   font-size: 1.2rem;
   color: white;
   font-weight: 700;
@@ -245,21 +248,23 @@ body.modal-open {
   /* overflow: scroll; */
 }
 
-.formaddtask input , select{
+.formaddtask input,
+select {
   padding: 10px;
   margin: 10px;
   border-radius: 10px;
   width: 20rem;
 }
 
-.taskdescription{
+.taskdescription {
   height: 50px;
   padding: 10px;
   margin: 10px;
   border-radius: 10px;
   width: 20rem;
 }
-.taskdescription1{
+
+.taskdescription1 {
 
   padding: 10px;
   margin: 10px;
@@ -271,24 +276,24 @@ body.modal-open {
   font-weight: 900;
 }
 
-a{
+a {
   cursor: pointer;
 }
 
-.formaddtask font{
+.formaddtask font {
   margin-left: 10px;
 }
 
-.closebtn{
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    background: none;
-    border: none;
-    font-size: 30px;
-    cursor: pointer;
-    color: #555;
-    font-weight: 900;
+.closebtn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  color: #555;
+  font-weight: 900;
 
 }
 
@@ -296,48 +301,49 @@ a{
   color: #d1d1d1;
 }
 
-.addtaskbtn{
+.addtaskbtn {
   width: 100%;
   margin-top: 30px;
   padding: 20px;
-  border-radius:0px 0px 10px 10px;
+  border-radius: 0px 0px 10px 10px;
   font-size: 1.3rem;
   font-weight: 800;
   background-color: #ff991a;
   border: 0;
 }
 
-.addtaskbtn:hover{
+.addtaskbtn:hover {
   cursor: pointer;
 }
 
-.taskcontainerinnerbg:hover{
+.taskcontainerinnerbg:hover {
   cursor: pointer;
 }
 
-.logout_link{
+.logout_link {
   padding: 10px;
   border-radius: 10px;
   border: 0;
   font-size: large;
   font-weight: 900;
 }
-.logout_link:hover{
+
+.logout_link:hover {
   transform: scale(1.2);
   cursor: pointer;
 }
 
-.authdiv{
+.authdiv {
   padding: 2vw 1vw;
 }
 
-.authnav{
+.authnav {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.authlinks button{
+.authlinks button {
   margin: 0vw 7vw;
   color: black;
   border: none;
@@ -345,10 +351,12 @@ a{
   font-size: 1.2rem;
   font-weight: 900;
 }
+
 #auth_btn {
   border: 5px solid #EFFE14;
-  box-shadow: 0 0 0 0px #fff, /* Add a white shadow */
-              0 0 0 0.4px #0069ba;
+  box-shadow: 0 0 0 0px #fff,
+    /* Add a white shadow */
+    0 0 0 0.4px #0069ba;
   width: max-content;
   padding: 5px;
   color: #EFFE14;
@@ -366,11 +374,11 @@ a{
 }
 
 
-button:hover{
+button:hover {
   cursor: pointer;
 }
 
-.authgrid{
+.authgrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   max-width: 1000px;
@@ -378,14 +386,14 @@ button:hover{
   gap: 20%;
 }
 
-.authform{
+.authform {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.pattern img{
+.pattern img {
   height: 75vh;
 }
 
@@ -417,6 +425,7 @@ button:hover{
   border: 0;
   color: white;
 }
+
 #name {
   margin-top: 10px;
   border-radius: 50px;
@@ -428,6 +437,7 @@ button:hover{
   border: 0;
   color: white;
 }
+
 #email {
   margin-top: 10px;
   border-radius: 50px;
@@ -451,7 +461,7 @@ button:hover{
 }
 
 .loginbtn {
-  padding:5% 10%;
+  padding: 5% 10%;
   border-radius: 50px;
   font-weight: 900;
   color: white;
@@ -462,22 +472,22 @@ button:hover{
   margin-bottom: 5%;
 }
 
-.authbtns{
+.authbtns {
   display: flex;
   justify-content: space-between;
 }
 
-.authform form{
+.authform form {
   margin-bottom: 5%;
 }
 
-.authform p{
+.authform p {
   font-weight: 700;
   color: #4e4e4e;
 }
 
-.tglloginbtn{
-  padding:5% 10%;
+.tglloginbtn {
+  padding: 5% 10%;
   border-radius: 50px;
   font-weight: 900;
   color: black;
@@ -487,7 +497,7 @@ button:hover{
   margin-bottom: 5%;
 }
 
-.error-message{
+.error-message {
   color: red;
 }
 
@@ -495,7 +505,8 @@ button:hover{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Full screen height */
+  height: 100vh;
+  /* Full screen height */
   font-size: 1.5rem;
   font-weight: bold;
   color: #555;
@@ -513,8 +524,13 @@ button:hover{
 }
 
 @keyframes spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 
@@ -553,8 +569,8 @@ button:hover{
 /* Responsive Sidebar */
 @media screen and (max-width: 768px) {
   .sidebar {
-      width: 60vw;
-      z-index: 99999;
+    width: 60vw;
+    z-index: 99999;
   }
 
 
@@ -575,6 +591,7 @@ button:hover{
     flex-direction: column;
     margin: 2%;
   }
+
   .navitems {
     margin-top: 2%;
     display: flex;
@@ -585,25 +602,26 @@ button:hover{
   }
 
 
-  
+
   .leftside {
 
-      color: #000;
-      font-size: 20px;
-      width: 100%;
-text-align: right;
-font-size: 1.2rem;
+    color: #000;
+    font-size: 20px;
+    width: 100%;
+    text-align: right;
+    font-size: 1.2rem;
 
-    }
-
-    .rightside {
-      display: flex;
-      justify-content: end;
-      align-items: center;
-      margin: 0%;
-      width: 100%;
   }
-  .rightside svg{
+
+  .rightside {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin: 0%;
+    width: 100%;
+  }
+
+  .rightside svg {
     display: none;
   }
 
@@ -614,11 +632,86 @@ font-size: 1.2rem;
     background-color: aliceblue;
     width: 220px;
     margin-right: 0%;
+  }
+
+  .inneraddtask {
+    background-color: #171717;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+    overflow: scroll;
+    overflow-y: auto;
+    z-index: 9999;
+  }
+  .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 5px;
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #555;
+    font-weight: 900;
 }
 
 
-  
+
+
+  .formaddtask input {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 65vw;
+  }
+
+  .formaddtask select {
+    width: 65vw;
+  }
+
+  .taskdescription {
+    height: 50px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 65vw;
+  }
+
+  .taskdescription1 {
+
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 65vw;
+    background-color: #00000000;
+    border: none;
+    color: white;
+    font-weight: 900;
+  }
+
+
+
+  .roundbtn {
+    border-radius: 100px;
+    width: 50px;
+    height: 50px;
+    filter: drop-shadow(0px 4px 4px #00000040) drop-shadow(0px 4px 4px #00000040);
+    border: none;
+    font-size: 60px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+  }
+
+  .roundbtn svg {
+    width: 28px;
+
+  }
+
 }
+
 .close-btn {
   position: absolute;
   top: 10px;
@@ -635,7 +728,7 @@ font-size: 1.2rem;
 
 
 @media screen and (max-width: 500px) {
-  .authgrid{
+  .authgrid {
     display: flex;
     flex-direction: column;
     max-width: 600px;
@@ -643,17 +736,18 @@ font-size: 1.2rem;
 
   }
 
-  .authform{
+  .authform {
     margin-top: 10%;
   }
 
-  .pattern{
+  .pattern {
     margin: 2% auto;
   }
 
-  .pattern img{
+  .pattern img {
     height: 45vh;
   }
+
   .taskcontainerbg {
     margin: 2% auto;
     background-color: white;
@@ -663,5 +757,5 @@ font-size: 1.2rem;
     border-radius: 14px;
   }
 
-  
+
 }

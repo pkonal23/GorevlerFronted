@@ -48,7 +48,7 @@ function Addtask({ onClose }) {
         <div className='outteraddtask'>
             <div className='inneraddtask'>
                 <form className='formaddtask' onSubmit={addTaskToList}>
-                    <button type="button" className='closebtn' onClick={() => { onClose(); console.log("Close Pressed"); }}>x</button><br /><br />
+                    <button type="button" className='closebtn' onClick={() => { onClose(); console.log("Close Pressed"); }}>x</button>
                     <center><h1>Add New Task</h1></center>
 
                     <font>Task Name</font> 
