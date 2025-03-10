@@ -93,7 +93,7 @@ function Sidebar({ onLogout, setAddTask, setAddVoiceTask }) {
                         <MdOutlinePostAdd /> Add Task
                     </a>
                     <a onClick={() => { setAddVoiceTask(true); console.log("Add Voice Task Pressed"); }}>
-                        <IoMicCircleOutline /> Speech
+                        <IoMicCircleOutline /> Speech AI
                     </a>
                     <a onClick={goToLearntMore}><SiTutanota /> Walk Through</a>
                     <br /><br />
