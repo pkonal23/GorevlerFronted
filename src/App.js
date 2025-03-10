@@ -8,6 +8,8 @@ import Addtask from './components/Addtask';
 import AddVoicetask from './components/AddVoicetask';
 import Aboutme from './components/Aboutme';
 
+import CarouselVideo from './components/LearnMore';
+
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
@@ -41,6 +43,10 @@ function App() {
   // If the path is #/about, render Aboutme
   if (currentPath === '#/about') {
     return <Aboutme />;
+  }
+
+  if (currentPath === '#/learnmore') {
+    return <CarouselVideo />;
   }
 
   return (

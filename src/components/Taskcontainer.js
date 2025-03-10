@@ -109,9 +109,9 @@ function Taskcontainer({ searchQuery }) {
                         onDoubleClick={() => deleteTask(d._id || d.task_id)} // ✅ Desktop double-click
                         onTouchStart={() => handleTouchStart(d._id || d.task_id)} // ✅ Mobile long-press start
                         onTouchEnd={handleTouchEnd} // ✅ Mobile long-press cancel if released early
-                        style={{ backgroundColor: d.task_status === 'Completed' ? '#d3d3d3' : 'transparent' }}
+
                     >
-                        <div className='taskcontainerinnerbg' style={{ backgroundColor: d.task_status === 'Completed' ? '#d3d3d3' : '' }}>
+                        <div className='taskcontainerinnerbg' style={{ backgroundColor: d.task_status === 'Completed' ? '#00000080' : '' }}>
                             <div className='taskpriority' style={{ backgroundColor: getPriorityColor(d.task_priority) }}></div>
                             <div className='taskinfo'>
                                 <div className='taskname'>{d.task_name}</div>

@@ -112,7 +112,7 @@ function AddVoicetask({ onClose }) {
             return;
         }
 
-        const pretext = "Give me response in this format: task name:  task description:  task priority: (High/Medium/Low), task duedate: (YYYY-MM-DD). ";
+        const pretext = "Use a very little friendly tone. Give me response in this format: task name:  task description[not long]:  task priority: (High/Medium/Low), task duedate: (YYYY-MM-DD). ";
         try {
             const response = await axios.post("https://gorevlerbackend.onrender.com/gettask", { text: pretext + voicetext });
             const apiResponse = response.data.responseText;
