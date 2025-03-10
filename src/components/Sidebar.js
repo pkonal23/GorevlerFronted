@@ -46,6 +46,8 @@ import { RiAccountCircleLine } from "react-icons/ri";
 import { BiLogOut } from "react-icons/bi";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineClose } from "react-icons/ai"; // Close icon
+import { SiTutanota } from "react-icons/si";
+
 
 function Sidebar({ onLogout, setAddTask, setAddVoiceTask }) {
     const [isOpen, setIsOpen] = useState(false);
@@ -59,6 +61,9 @@ function Sidebar({ onLogout, setAddTask, setAddVoiceTask }) {
     }, []);
 
     const toggleSidebar = () => setIsOpen(!isOpen);
+    const goToLearntMore = () => {
+        window.location.href = '#/learnmore'; // Navigates to About Me
+      };
 
     return (
         <>
@@ -90,7 +95,7 @@ function Sidebar({ onLogout, setAddTask, setAddVoiceTask }) {
                     <a onClick={() => { setAddVoiceTask(true); console.log("Add Voice Task Pressed"); }}>
                         <IoMicCircleOutline /> Speech
                     </a>
-                    <a href='/'><RiAccountCircleLine /> Account</a>
+                    <a onClick={goToLearntMore}><SiTutanota /> Walk Through</a>
                     <br /><br />
                     <a>
                         <button className='logout_link' onClick={onLogout}>
